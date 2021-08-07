@@ -26,9 +26,17 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: yarn
-    - run: yarn build
-    - run: yarn export
+    - name: Installing packages
+      run: yarn
+    - name: Building App
+      run: yarn build
+      env:
+        NEXT_PUBLIC_BASE_PATH: /yourmartbd.com
+    - name: Exporting App
+      run: yarn export
+      env:
+        NEXT_PUBLIC_BASE_PATH: /yourmartbd.com
+    - run: touch ./out/.nojekyll
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@3.5.9
       with:
