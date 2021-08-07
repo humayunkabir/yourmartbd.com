@@ -30,12 +30,12 @@ jobs:
       run: yarn
     - name: Building App
       run: yarn build
-      env:
-        NEXT_PUBLIC_BASE_PATH: /yourmartbd.com
+      # env:
+      #   NEXT_PUBLIC_BASE_PATH: /yourmartbd.com
     - name: Exporting App
       run: yarn export
-      env:
-        NEXT_PUBLIC_BASE_PATH: /yourmartbd.com
+      # env:
+      #   NEXT_PUBLIC_BASE_PATH: /yourmartbd.com
     - run: touch ./out/.nojekyll
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@3.5.9
