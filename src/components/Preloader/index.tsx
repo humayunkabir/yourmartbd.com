@@ -17,7 +17,7 @@ class Preloader extends Component {
 
   render() {
     return (
-      <div className="preloader">
+      <div className="preloader bg-indigo-600">
         <div className="spinner-wrap">
           <div className="spinner" />
         </div>
