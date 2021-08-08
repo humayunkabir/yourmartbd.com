@@ -1,8 +1,14 @@
 import 'styles/globals.css';
 import 'styles/preloader.css';
+import Preloader from 'components/Preloader';
 import type { AppProps } from 'next/app';
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+function YourMartApp({ Component, pageProps }: AppProps) {
+  return (
+    <>
+      <Component {...pageProps} />
+      <Preloader />
+    </>
+  );
 }
-export default MyApp;
+export default YourMartApp;

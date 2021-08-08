@@ -15,7 +15,7 @@
   opacity: 0;
   visibility: hidden;
 }
-.preloader .spinner_wrap {
+.preloader .spinner-wrap {
   position: absolute;
   top: 50%;
   left: 50%;
