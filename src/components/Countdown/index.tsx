@@ -5,9 +5,9 @@ interface CountDownBoxProps {
 }
 
 const CountDownBox = ({ title, count }: CountDownBoxProps) => (
-  <div className="flex flex-col border justify-center items-center w-1/4 p-5 bg-gradient-to-r from-indigo-600 to-indigo-400 rounded-lg text-white">
-    <h2 className="text-5xl">{count}</h2>
-    <h2 className="text-2xl">{title}</h2>
+  <div className="flex flex-col border justify-center items-center w-1/2 lg:w-1/4 p-5 bg-gradient-to-r from-indigo-600 to-indigo-400 rounded-lg text-white flex-1">
+    <h2 className="text-5xl font-extrabold">{count}</h2>
+    <h2 className="text-lg">{title}</h2>
   </div>
 );
 
@@ -59,7 +59,7 @@ const Countdown = () => {
   }, [count]);
 
   return (
-    <div id="countdown" className="flex justify-center gap-3 w-10/12">
+    <div id="countdown" className="flex justify-center gap-3 w-10/12 flex-wrap">
       <CountDownBox title="Days" count={state.days} />
       <CountDownBox title="Hours" count={state.hours} />
       <CountDownBox title="Minutes" count={state.minutes} />
