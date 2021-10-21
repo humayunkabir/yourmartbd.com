@@ -5,7 +5,7 @@ interface CountDownBoxProps {
 }
 
 const CountDownBox = ({ title, count }: CountDownBoxProps) => (
-  <div className="flex flex-col border justify-center items-center w-1/2 lg:w-1/4 p-5 bg-gradient-to-r from-indigo-600 to-indigo-400 rounded-lg text-white flex-1">
+  <div className="flex flex-col items-center justify-center flex-1 w-1/2 p-5 text-white border rounded-lg lg:w-1/4 bg-gradient-to-r from-indigo-600 to-indigo-400">
     <h2 className="text-5xl font-extrabold">{count}</h2>
     <h2 className="text-lg">{title}</h2>
   </div>
@@ -53,13 +53,13 @@ const Countdown = () => {
   );
 
   useEffect(() => {
-    setDeadline(new Date('Oct 08, 2021 21:00:00').getTime());
+    setDeadline(new Date('Dec 31, 2021 23:59:59').getTime());
     const x: any = setInterval(() => count(x), 1000);
     return () => clearInterval(x);
   }, [count]);
 
   return (
-    <div id="countdown" className="flex justify-center gap-3 w-10/12 flex-wrap">
+    <div id="countdown" className="flex flex-wrap justify-center w-10/12 gap-3">
       <CountDownBox title="Days" count={state.days} />
       <CountDownBox title="Hours" count={state.hours} />
       <CountDownBox title="Minutes" count={state.minutes} />
